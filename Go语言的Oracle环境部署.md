@@ -31,6 +31,11 @@
     export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 ```
 
+- 建立链接
+```
+ln -s libclntsh.so.12.1 libclntsh.so
+```
+
 - 新增库搜索目录，在/etc/ld.so.conf文件中添加行/opt/oracle/12.1/lib，执行ldconfig -p 命令，检查库是否已加载到库目录缓存中
 ```
 [root@ali-test-2 lib]# ldconfig -p | grep libclntsh.so
